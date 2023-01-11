@@ -6,7 +6,7 @@
 
 ###
 
-<h6 align="left">OS: Windows 11 (22h2), Android 13</h6>
+<h6 align="left"><b>OS</b>: Windows 11 (22h2), Android 13</h6>
 
 ###
 
