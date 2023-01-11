@@ -7,19 +7,6 @@
 ###
 
 <h6 align="left">OS: Windows 11 (22h2), Android 13</h6>
-<h6 align="left">Host: Natoj Ta'lim #NT</h6>
-<h6 align="left">Kernel: Web Full-Stack Programming #WEB</h6>
-<h6 align="left">IDE: VSCode (v1.75)</h6>
-<p align="left"></p>
-<h6 align="left">Languages.Programming:  JavaScript</h6>
-
-###
-
-<h6 align="left">Languages.Computer: HTML, CSS, JSON</h6>
-<h6 align="left">Languages.Real: Uzbek, Russian</h6>
-<h6 align="left">Others: React.Js, Bootstrab (5.3), MDB, Sass</h6>
-<h6 align="left">Hobbies.Software: Search for errors and defects on the sites</h6>
-<h6 align="left">Hobbies.Hardware: Overclocking, Enjoy Yandex Music</h6>
 
 ###
 
