@@ -7,50 +7,23 @@
 ###
 
 <h6 align="left">OS: Windows 11 (22h2), Android 13</h6>
-
-###
-
 <h6 align="left">Host: Natoj Ta'lim #NT</h6>
-
-###
-
 <h6 align="left">Kernel: Web Full-Stack Programming #WEB</h6>
-
-###
-
 <h6 align="left">IDE: VSCode (v1.75)</h6>
-
-###
-
 <p align="left"></p>
-
-###
-
 <h6 align="left">Languages.Programming:  JavaScript</h6>
 
 ###
 
 <h6 align="left">Languages.Computer: HTML, CSS, JSON</h6>
-
-###
-
 <h6 align="left">Languages.Real: Uzbek, Russian</h6>
-
-###
-
 <h6 align="left">Others: React.Js, Bootstrab (5.3), MDB, Sass</h6>
-
-###
-
 <h6 align="left">Hobbies.Software: Search for errors and defects on the sites</h6>
-
-###
-
 <h6 align="left">Hobbies.Hardware: Overclocking, Enjoy Yandex Music</h6>
 
 ###
 
-<div align="center">
+<div align="" style="display: flex; justify-content: space-between; margin-top: 15px">
   <img src="https://github-readme-stats.vercel.app/api?hide_title=true&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dark&locale=en&hide_border=false&username=bd-ans" height="110" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dark&hide_border=false&username=bd-ans" height="110" alt="languages graph"  />
 </div>
