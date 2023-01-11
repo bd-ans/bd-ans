@@ -82,10 +82,6 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/bd-ans/bd-ans/blob/output/snake.svg" alt="Snake animation" />
-
-###
-
 <div align="left">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=bd-ans.bd-ans&left_color=darkorange&right_color=black"  />
-</div># bd-ans
+</div>
