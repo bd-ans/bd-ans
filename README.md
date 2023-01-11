@@ -2,7 +2,7 @@
 
 ###
 
-<h4 align="left">I'm Otamurod, I'm studying Full Stack web programming at "Najot Ta'lim</h4>
+<h4 align="left">I'm Otamurod, I'm studying Full Stack web programming at "Najot Ta'lim"</h4>
 
 ###
 
