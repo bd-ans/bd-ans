@@ -81,9 +81,6 @@ function datediff(date1, date2) {
 }
 
 const calage = () => {
-	tZone = new Date()
-		.toLocaleString("uz", { timeZoneName: "short" })
-		.split(" ")[2];
 	var calday = 19;
 	var calmon = 05;
 	var calyear = 2005;
@@ -122,14 +119,14 @@ let DATA = {
 	uMonth: uCMonth,
 	uDay: uCDay,
 
-	date: new Date().toLocaleString("en-US", {
-		weekday: "long",
-		month: "long",
+	date: new Date().toLocaleString("uz", {
+		// weekday: "long",
+		// month: "long",
 		day: "numeric",
 		hour: "numeric",
 		minute: "numeric",
 		// timeZoneName: "short",
-		timeZone: "Asia/Tashkent",
+		timeZone: "Asia/Tashkent",N
 	}),
 };
 /**
