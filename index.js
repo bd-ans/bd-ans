@@ -9,10 +9,6 @@ let uCMonth = 0;
 let uCDay = 0;
 
 /* let Repos = 0;
-let Commits = 0;
-let getCommnets = ([]);
-let Comments = 0;
-let Stars = 0;
 
 const getRepos = async () => {
 	const res = await fetch("https://api.github.com/users/bd-ans/repos");
@@ -25,17 +21,7 @@ setTimeout(() => {
 	console.log(Repos);
 }, 1000);
 
-const getCommits = async () => {
-	const res = await fetch("https://api.github.com/users/bd-ans/events");
-	const data = await res.json();
-	Commits = data.length;
-};
-
-getCommits();
-setTimeout(() => {
-	console.log(Commits);
-}, 1000); */
-
+*/
 
 var mS = [
 	"Jan",
@@ -135,10 +121,8 @@ let DATA = {
 	uYear: uCYear,
 	uMonth: uCMonth,
 	uDay: uCDay,
-	tZone : 'GMT+5',
 
-	name: "Otamurod",
-	date: new Date().toLocaleString("uz", {
+	date: new Date().toLocaleString("en-US", {
 		weekday: "long",
 		month: "long",
 		day: "numeric",

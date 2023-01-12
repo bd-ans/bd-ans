@@ -6,3 +6,7 @@
 ![github contribution grid snake animation][def]![github contribution grid snake animation](https://raw.githubusercontent.com/bd-ans/bd-ans/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 
 [def]: https://raw.githubusercontent.com/bd-ans/bd-ans/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only
+
+<h6 align="right">
+  last updated: Thursday, January 12 at 10:21 PM
+</h6>
