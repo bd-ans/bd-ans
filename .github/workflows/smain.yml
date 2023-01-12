@@ -2,7 +2,7 @@ name: generate animation
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */6 * * *"
 
   workflow_dispatch:
 
@@ -23,9 +23,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/dark.svg
-            dist/light.svg
-      - name: push github-contribution-grid-snake.svg, github-contribution-grid-snake-dark.svg, dark.svg, light.svg to output branch
+      - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
