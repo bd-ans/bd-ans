@@ -9,7 +9,7 @@ jobs:
       - name : Install dependencies
         run : npm ci
       - name : node run index.js
-        run : node index.cjs
+        run : node index.js
       - name: Makefile git add commit push github
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
