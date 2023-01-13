@@ -1,0 +1,13 @@
+name: dark-svg-generator
+
+on:
+  schedule:
+    - cron: "0 */5 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - master
+
+jobs:
