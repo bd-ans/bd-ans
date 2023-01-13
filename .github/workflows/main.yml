@@ -13,27 +13,17 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout current repository to Master branch
+      - name: Get repository code
         uses: actions/checkout@v3
-      - name: Setup NodeJs 12
-        uses: actions/setup-node@v3
-        with:
-          node-version: "12"
-      - name: Cache dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
-        run: npm install
-      - name: Generate README.md
+        run: npm ci
+      - name: node run index.js
         run: node index.js
       - name: Makefile git add commit push github
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add .
-          git commit -m "."
+          git commit -m "commit by github-actions[bot]"
           git push

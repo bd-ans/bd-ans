@@ -107,8 +107,6 @@ function uuidv4() {
 	);
 }
 
-console.log(uuidv4())
-
 calage();
 let DATA = {
 	uYear: uCYear,
