@@ -30,9 +30,10 @@ jobs:
         run: npm install
       - name: Generate README.md
         run: node index.js
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          commit_message: "."
+      - name: Makefile git add commit push github
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "commit by github-actions[bot]"
+          git push

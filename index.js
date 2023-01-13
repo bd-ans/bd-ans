@@ -129,17 +129,17 @@ let DATA = {
 
 function generateReadMe() {
 	fs.readFile(MUSTACHE_DARK_DIR, (err, data) => {
-		// if (err) throw err;
+		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("dark.svg", output);
 	});
 	fs.readFile(MUSTACHE_LIGHT_DIR, (err, data) => {
-		// if (err) throw err;
+		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("light.svg", output);
 	});
 	fs.readFile(MUSTACHE_MAIN_DIR, (err, data) => {
-		// if (err) throw err;
+		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("README.md", output);
 	});
