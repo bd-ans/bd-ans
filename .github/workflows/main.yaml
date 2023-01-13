@@ -11,7 +11,7 @@ on:
       - master
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,13 +28,11 @@ jobs:
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm install
-      - name: Generate dark.svg
+      - name: Generate README file
         run: node index.js
-      - name: Commit and Push new dark.svg
+      - name: Commit and Push new README.md to the repository
         uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: "Update dark.svg"
-          branch: master
-          file_pattern: dark.svg
+          commit_message: "."
