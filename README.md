@@ -1,6 +1,6 @@
  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./imgs/dark.svg">
-    <img alt="bd-ans's GitHub Profile README" src="./imgs/light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg">
+    <img alt="bd-ans's GitHub Profile README" src="light.svg">
   </picture>
 
 ![github contribution grid snake animation][def]![github contribution grid snake animation](https://raw.githubusercontent.com/bd-ans/bd-ans/output/github-contribution-grid-snake.svg#gh-light-mode-only)
