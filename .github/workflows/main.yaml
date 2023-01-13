@@ -1,7 +1,7 @@
 name: run index.js and push to github
 on: push
 jobs:
-  run-idex.js:
+  runidexjs:
     runs-on: ubuntu-latest
     steps:
       - name : Get repository code
