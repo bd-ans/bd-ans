@@ -1,4 +1,4 @@
-name: generate dark.svg and light.svg files using node
+name: generate README.md
 
 on:
   schedule:
@@ -28,9 +28,9 @@ jobs:
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm install
-      - name: Generate dark.svg and light.svg files
+      - name: Generate README.md
         run: node index.js
-      - name: Commit and Push changes to the output branch
+      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
