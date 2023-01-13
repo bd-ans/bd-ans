@@ -1,8 +1,5 @@
 name: generate dark.svg and light.svg and push to github
 on: push
-
-workflow_dispatch:
-
 jobs:
   generate-and-push:
     runs-on: ubuntu-latest
