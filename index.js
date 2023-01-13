@@ -8,8 +8,6 @@ let uCYear = 0;
 let uCMonth = 0;
 let uCDay = 0;
 
-let uuuid = 0;
-
 var mS = [
 	"Jan",
 	"Feb",
@@ -89,6 +87,8 @@ const calage = () => {
 		uCYear = dife[0];
 		uCMonth = dife[1];
 		uCDay = dife[2];
+
+		console.log(dife[0], dife[1], dife[2]);
 
 		dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days";
 		var as = parseInt(calyear) + dife[0] + 1;
