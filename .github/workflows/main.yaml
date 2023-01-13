@@ -30,16 +30,17 @@ jobs:
         run: npm install
       - name: Generate README file
         run: node index.js
-      - name: Check if dark.svg and light.svg files are changed
-        uses: tj-actions/verify-changed-files@v13
-        id: check changed files
+      - name: Commit and Push new README.md file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: |
-            dark.svg
-            light.svg
+          commit_message: "."
       - name: Commit and Push new dark.svg and light.svg files
         uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: "."
+          file_pattern: "dist/*"
+          
