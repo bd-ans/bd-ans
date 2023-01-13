@@ -35,5 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: "Update dark.svg and light.svg files"
-          branch: output
+          commit_message: "."
