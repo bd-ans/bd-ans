@@ -39,9 +39,7 @@ jobs:
             light.svg
       - name: Commit and Push new dark.svg and light.svg files
         uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: "Update dark.svg and light.svg files"
-          commit_options: "--signoff"
-          branch: master
-          file_pattern: dark.svg light.svg
-        if: steps.check changed files.outputs.changed == 'true'
+          commit_message: "."
