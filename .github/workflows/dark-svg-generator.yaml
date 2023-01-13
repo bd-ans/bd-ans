@@ -1,4 +1,4 @@
-name: dark-svg-generator
+name: node image generator
 
 on:
   schedule:
@@ -11,3 +11,33 @@ on:
       - master
 
 jobs:
+  generate:
+    runs-on : ubuntu-latest
+
+    steps:
+      - name: Checkout current repository to Master branch
+        uses: actions/checkout@v2
+      - name: Setup NodeJs 19.3.0
+        uses: actions/setup-node@v2
+        with:
+          node-version: "19.3.0"
+      - name: Cache dependencies and build outputs to improve workflow execution time.
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
+      - name: generate dark.svg image
+        uses: Platane/snk/svg-only@v2
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/dark.svg?palette=github-dark
+      - name: push dark.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
