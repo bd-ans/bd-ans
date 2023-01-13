@@ -32,6 +32,13 @@ jobs:
       - name: Generate dark.svg and light.svg files
         run: node index.js
 
+        # set timeout=10 minutes
+      - name: Set timeout=10 minutes
+        uses: jwalton/gh-set-output@v1
+        with:
+          name: timeout-minutes
+          value: 10
+
       - name: Commit and Push new files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
