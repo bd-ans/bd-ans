@@ -1,11 +1,14 @@
 name: Node CI
 
 on:
+  schedule:
+    - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+
   push:
     branches:
     - master
-
-workflow_dispatch:
 
 jobs:
   build:
@@ -22,8 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: generate benchmarks
-        run: |
-          npm run generate-some-files-for-specific-node-version
+        run: node index.js
       - name: push
         uses: github-actions-x/commit@v2.9
         with:
