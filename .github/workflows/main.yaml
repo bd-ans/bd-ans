@@ -1,4 +1,4 @@
-name: generate dark.svg and light.svg files using node.js
+name: generate dark.svg and light.svg files using node
 
 on:
   schedule:
@@ -13,43 +13,26 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout current repository to Master branch
-        uses: actions/checkout@v3
-      - name: Setup NodeJs 19.4.0
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v2
+      - name: Setup NodeJs 16
+        uses: actions/setup-node@v2
         with:
-          node-version: "19.4.0"
+          node-version: "16"
       - name: Cache dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v3
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm install
-
-      - name: Generate dark.svg and light.svg files
+      - name: Generate README file
         run: node index.js
-
-        # if dark.svg and light.svg files are changed, commit and push them to the repository
-
-      - name: Check if dark.svg and light.svg files are changed
-        uses: tj-actions/verify-changed-files@v13
-        id: check changed files
-        with:
-          files: |
-            dark.svg
-            light.svg
-      -name : Check if dark.svg and light.svg files are changed
-        if: steps.check changed files.outputs.changed == 'true'
-        run: echo "dark.svg and light.svg files are changed"
-
-      - name: Commit and Push new files
+      - name: Commit and Push new README.md to the repository
         uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: "Update dark.svg and light.svg files"
-          commit_options: "--signoff"
-          commit_user_name: ${{ github.actor }}
-          commit_user_email: ${{ github.actor }}@users.noreply.github.com
-          commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          file_pattern: "dark.svg,light.svg"
+          commit_message: "."
