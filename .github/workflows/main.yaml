@@ -22,25 +22,18 @@ jobs:
         with:
           node-version: "16"
       - name: Cache dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm install
-      - name: Generate README file
+      - name: Generate dark.svg and light.svg files
         run: node index.js
-      - name: Commit and Push new README.md file
+      - name: Commit and Push changes to the output branch
         uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: "."
-      - name: Commit and Push new dark.svg and light.svg files
-        uses: stefanzweifel/git-auto-commit-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          commit_message: "."
-          file_pattern: "dist/*"
-          
+
