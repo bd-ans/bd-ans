@@ -32,12 +32,18 @@ jobs:
       - name: Generate dark.svg and light.svg files
         run: node index.js
 
-        # set timeout=10 minutes
-      - name: Set timeout=10 minutes
-        uses: jwalton/gh-set-output@v1
+        # if dark.svg and light.svg files are changed, commit and push them to the repository
+
+      - name: Check if dark.svg and light.svg files are changed
+        uses: tj-actions/verify-changed-files@v13
+        id: check changed files
         with:
-          name: timeout-minutes
-          value: 10
+          files: |
+            dark.svg
+            light.svg
+      -name : Check if dark.svg and light.svg files are changed
+        if: steps.check changed files.outputs.changed == 'true'
+        run: echo "dark.svg and light.svg files are changed"
 
       - name: Commit and Push new files
         uses: stefanzweifel/git-auto-commit-action@v4
