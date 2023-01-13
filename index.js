@@ -146,5 +146,5 @@ function generateReadMe() {
 		fs.writeFileSync("./README.md", output);
 		console.log("README.md Generated");
 	});
-} 
+}  
 generateReadMe();
