@@ -27,8 +27,8 @@ jobs:
         run: node index.js
       - name: Makefile git add commit push github
         run: |
-          make git-add-commit-push-github
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USER_NAME: ${{ secrets.GITHUB_USER_NAME }}
-          GITHUB_USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "commit from github actions"
+          git push
