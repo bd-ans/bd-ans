@@ -37,5 +37,3 @@ jobs:
         with:
           commit_message: "Update dark.svg and light.svg files"
           branch: output
-          file_pattern: dark.svg light.svg
-
