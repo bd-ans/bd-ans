@@ -1,4 +1,4 @@
-name: README build
+name: generate README.md
 
 on:
   schedule:
