@@ -16,9 +16,9 @@ jobs:
 
     steps:
       - name: Checkout current repository to Master branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup NodeJs 16
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
       - name: Cache dependencies and build outputs to improve workflow execution time.
