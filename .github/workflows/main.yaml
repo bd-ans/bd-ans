@@ -32,14 +32,6 @@ jobs:
       - name: Generate README file
         run: node index.js
 
-      - name: "Run if changes have been detected"
-        if: ./README.md != ./README.md
-        run: echo "Changes!"
-
-      - name: "Run if no changes have been detected"
-        if: ./README.md == ./README.md
-        run: echo "No Changes!"
-
       - name: Commit and Push new README.md to the repository
         uses: stefanzweifel/git-auto-commit-action@v4
         env:
