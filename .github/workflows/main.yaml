@@ -2,7 +2,7 @@ name: generate README.md
 
 on:
   schedule:
-    - cron: "*/6 * * * *"
+    - cron: "*/2 * * * *"
   
   workflow_dispatch:
 
