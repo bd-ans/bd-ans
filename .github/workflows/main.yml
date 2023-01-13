@@ -1,15 +1,35 @@
-name: generate dark.svg and light.svg and push to github
-on: push
+name: generate-readme
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - master
+
 jobs:
-  generate-and-push:
+  generate:
     runs-on: ubuntu-latest
+
     steps:
-      - name : Get repository code
-        uses : actions/checkout@v3
-      - name : Install dependencies
-        run : npm ci
-      - name : node run index.js
-        run : node index.js
+      - name: Checkout current repository to Master branch
+        uses: actions/checkout@v3
+      - name: Setup NodeJs 12
+        uses: actions/setup-node@v3
+        with:
+          node-version: "12"
+      - name: Cache dependencies and build outputs to improve workflow execution time.
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
+      - name: Generate README.md
+        run: node index.js
       - name: Makefile git add commit push github
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
