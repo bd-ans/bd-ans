@@ -132,15 +132,11 @@ function generateReadMe() {
 		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("./imgs/dark.svg", output);
-		const writtenFile = fs.readFileSync("./imgs/dark.svg");
-		console.log("writtenFile", writtenFile);
 	});
 	fs.readFile(MUSTACHE_LIGHT_DIR, (err, data) => {
 		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("./imgs/light.svg", output);
-		const updatedFile = fs.readFileSync("./imgs/light.svg");
-		console.log("updatedFile", updatedFile);
 	});
 	fs.readFile(MUSTACHE_MAIN_DIR, (err, data) => {
 		if (err) throw err;
