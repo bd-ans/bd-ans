@@ -1,31 +1,26 @@
-name: Node CI
+name: generate README.md
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-
+    - cron: "*/2 * * * *"
+  
   workflow_dispatch:
 
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version:
-          - 10.x
-          - 12.x
+
     steps:
-      - uses: actions/checkout@v1
-      name: Setup NodeJs 12
+      - name: Checkout current repository to Master branch
+        uses: actions/checkout@v3
+      - name: Setup NodeJs 12
         uses: actions/setup-node@v3
         with:
           node-version: "12"
-      - name: generate benchmarks
-        run: node index.js
       - name: Cache dependencies and build outputs to improve workflow execution time.
         uses: actions/cache@v3
         with:
@@ -35,10 +30,9 @@ jobs:
         run: npm install
       - name: Generate README.md
         run: node index.js
-      - name: push
-        uses: github-actions-x/commit@v2.9
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: master
-          commit-message: '${{ matrix.node-version }} adds auto-generated benchmarks and bar graph'
-          rebase: 'true' # pull and rebase before commit
+          commit_message: "."
