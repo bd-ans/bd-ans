@@ -8,7 +8,13 @@ let uCYear = 0;
 let uCMonth = 0;
 let uCDay = 0;
 
+// creqate date var and set time zone
+
 var dat = new Date();
+dat.toLocaleString("uz", {
+	timeZone: "Asia/Tashkent",
+});
+
 var curday = dat.getDate();
 var curmon = dat.getMonth() + 1;
 var curyear = dat.getFullYear();
@@ -75,6 +81,7 @@ const calage = () => {
 		uCDay = dife[2];
 
 		console.log(dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days");
+		console.log(dat);
 
 		dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days";
 		var as = parseInt(calyear) + dife[0] + 1;
