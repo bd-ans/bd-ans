@@ -23,7 +23,7 @@ jobs:
       - name: Makefile git add commit push github
         run: |
           ${{ secrets.GH_USER_MAIL }}}
-          git config --global user.name "github-actions[bot]"
+          ${{ secrets.GH_USER_NAME }}}
           git add .
           git commit -m "."
           git push
