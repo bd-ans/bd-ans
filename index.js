@@ -124,7 +124,7 @@ let DATA = {
 	uDay: uCDay,
 	uuuid: generateUUID(),
 
-	date: new Date().toLocaleString("en", {
+	date: new Date().toLocaleString("uz", {
 		hour: "numeric",
 		minute: "numeric",
 		timeZone: "Asia/Tashkent",
