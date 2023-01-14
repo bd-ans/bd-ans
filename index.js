@@ -8,20 +8,6 @@ let uCYear = 0;
 let uCMonth = 0;
 let uCDay = 0;
 
-var mS = [
-	"Jan",
-	"Feb",
-	"Mar",
-	"Apr",
-	"May",
-	"Jun",
-	"Jul",
-	"Aug",
-	"Sep",
-	"Oct",
-	"Nov",
-	"Dec",
-];
 var dat = new Date();
 var curday = dat.getDate();
 var curmon = dat.getMonth() + 1;
