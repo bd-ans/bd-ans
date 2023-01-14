@@ -8,13 +8,8 @@ let uCYear = 0;
 let uCMonth = 0;
 let uCDay = 0;
 
-// creqate date var and set time zone
-
 var dat = new Date();
-dat.toLocaleString("uz", {
-	timeZone: "Asia/Tashkent",
-});
-
+dat.setHours(dat.getHours() + 5);
 var curday = dat.getDate();
 var curmon = dat.getMonth() + 1;
 var curyear = dat.getFullYear();
