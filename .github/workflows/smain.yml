@@ -1,4 +1,4 @@
-name: generate anim
+name: generate animation
 
 on:
   schedule:
@@ -17,14 +17,14 @@ jobs:
 
     steps:
       - name: generate github-contribution-grid-snake.svg
-        uses: ${{ secrets.SNAKE_ACTION_V }}
+        uses: Platane/snk/svg-only@v2
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
       - name: push github-contribution-grid-snake.svg to the output branch
-        uses: ${{ secrets.CRAZY_PUSH_ACTION_V }}
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
