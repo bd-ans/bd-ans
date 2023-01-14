@@ -125,13 +125,11 @@ let DATA = {
 	uuuid: generateUUID(),
 
 	date: new Date().toLocaleString("en", {
-		weekday: "long",
 		hour: "numeric",
 		minute: "numeric",
 		timeZone: "Asia/Tashkent",
 	}),
 };
-
 
 function generateReadMe() {
 	fs.readFile(MUSTACHE_DARK_DIR, (err, data) => {
