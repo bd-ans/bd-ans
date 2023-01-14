@@ -24,6 +24,4 @@ jobs:
         run: |
           ${{ secrets.GH_USER_MAIL }}}
           ${{ secrets.GH_USER_NAME }}}
-          git add .
-          git commit -m "."
-          git push
+          ${{ secrets.GH_TOKEN }}}
