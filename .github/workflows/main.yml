@@ -22,7 +22,7 @@ jobs:
         run: node index.js
       - name: Makefile git add commit push github
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          ${{ secrets.GH_USER_MAIL }}}
           git config --global user.name "github-actions[bot]"
           git add .
           git commit -m "."
