@@ -75,9 +75,6 @@ const calage = () => {
 		uCMonth = dife[1];
 		uCDay = dife[2];
 
-		console.log(dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days");
-		console.log(dat);
-
 		dife[0] + " years, " + dife[1] + " months, and " + dife[2] + " days";
 		var as = parseInt(calyear) + dife[0] + 1;
 		var diff =
