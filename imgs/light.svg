@@ -59,7 +59,7 @@ text, tspan {white-space: pre;}
 
 <text x="370" y="30" fill="#24292f">
 <tspan x="370" y="30" font-weight="bold">bd-ans <tspan font-weight="light" font-size="21">&#9896;</tspan></tspan>
-<tspan x="726" y="28" class="keyColor" font-size="11">Automatic Last Updated: <tspan class="valueColor">Today at <tspan class="addColor" font-weight="bolder">11:55</tspan></tspan></tspan>
+<tspan x="726" y="28" class="keyColor" font-size="11">Automatic Last Updated: <tspan class="valueColor">Today at <tspan class="addColor" font-weight="bolder">11:56</tspan></tspan></tspan>
 <tspan x="370" y="50">——————</tspan>
 <tspan x="370" y="70" class="keyColor">OS</tspan>: <tspan class="valueColor">Windows 11, Android 13</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor"><tspan font-weight="bold">18 years,</tspan> 1 months, 23 days</tspan>
@@ -67,10 +67,10 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Web Full Stack development</tspan><tspan class="commentColor"> #WEB</tspan>
 <tspan x="370" y="150" class="keyColor">IDE</tspan>: <tspan class="valueColor">VS Code</tspan>
 
-<tspan x="370" y="190" class="keyColor">Languages</tspan>.<tspan class="keyColor">Scripting</tspan>: <tspan class="valueColor">JavaScript</tspan>
+<tspan x="370" y="190" class="keyColor">Languages</tspan>.<tspan class="keyColor">Scripting</tspan>: <tspan class="valueColor">JavaScript, TypeScript</tspan>
 <tspan x="370" y="210" class="keyColor">Languages</tspan>.<tspan class="keyColor">Computer</tspan>: <tspan class="valueColor">HTML, CSS, SCSS</tspan>
 <tspan x="370" y="230" class="keyColor">Languages</tspan>.<tspan class="keyColor">Real</tspan>: <tspan class="valueColor">Uzbek, Russian</tspan>
-<tspan x="370" y="250" class="keyColor">Others:</tspan> <tspan class="valueColor">Node.JS, React.JS, Express.JS, Nest.JS, TypeScript</tspan>
+<tspan x="370" y="250" class="keyColor">Others:</tspan> <tspan class="valueColor">NodeJS, ReactJS, ExpressJS, NestJS</tspan>
 
 <tspan x="370" y="290" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Software</tspan>: <tspan class="valueColor">Finding errors, Debugging, Testing</tspan>
 <tspan x="370" y="310" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>: <tspan class="valueColor">Overclocking, Rest, Enjoying YMusic</tspan>
@@ -81,7 +81,7 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="430" class="keyColor">Twitter</tspan>: <tspan class="valueColor">elaytpatters</tspan>
 <tspan x="370" y="470" class="keyColor">GitHub Stats</tspan><tspan class="valueColor" font-weight="bold"> &#8615;</tspan>
 <tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">2</tspan> {<tspan class="keyColor">Contrib_to</tspan>: <tspan class="valueColor">30+</tspan>} | <tspan class="keyColor">Commmits</tspan>: <tspan class="valueColor">13,425  </tspan> | <tspan class="keyColor">Stars</tspan>: <tspan class="valueColor">0</tspan>
-<tspan x="370" y="510" class="transparentColor">df9add83-38d4-4419-bb96-8d1102ccaa1d</tspan>
+<tspan x="370" y="510" class="transparentColor">3f2c1605-327e-4c0e-952e-3f3ebdd4fec7</tspan>
 <tspan x="370" y="510" class="keyColor">Lines of Code Written by Me</tspan>: <tspan class="valueColor">48,241</tspan> (<tspan class="addColor">55,419++</tspan>, <tspan class="delColor">5,218--</tspan>)
 </text>
 </svg>
