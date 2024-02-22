@@ -1,7 +1,7 @@
 const Mustache = require("mustache");
 const fs = require("fs");
 const MUSTACHE_DARK_DIR = "./mustache/dark.mustache";
-const MUSTACHE_LIGHT_DIR = "./mustache/light.mustache";
+// const MUSTACHE_LIGHT_DIR = "./mustache/light.mustache";
 const MUSTACHE_MAIN_DIR = "./mustache/main.mustache";
 
 let uCYear = 0;
@@ -124,11 +124,11 @@ function generateReadMe() {
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("./imgs/dark.svg", output);
 	});
-	fs.readFile(MUSTACHE_LIGHT_DIR, (err, data) => {
+/* 	fs.readFile(MUSTACHE_LIGHT_DIR, (err, data) => {
 		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
 		fs.writeFileSync("./imgs/light.svg", output);
-	});
+	}); */
 	fs.readFile(MUSTACHE_MAIN_DIR, (err, data) => {
 		if (err) throw err;
 		const output = Mustache.render(data.toString(), DATA);
